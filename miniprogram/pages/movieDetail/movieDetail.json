@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-field": "vant-weapp/field",
+    "van-rate": "vant-weapp/rate",
+    "van-progress": "vant-weapp/progress",
+    "van-tag": "/vant-weapp/tag/"
+  }
+}

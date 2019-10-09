@@ -1,0 +1,16 @@
+<van-field
+    value="{{ comment }}"
+    placeholder="说点什么吧"
+    bind:change="onCommentChange"
+  />
+ <van-rate
+  value="{{ score }}"
+  size="{{ 25 }}"
+  color="#f44"
+  allow-half
+  count="{{ 10 }}"
+  void-color="#eee"
+  void-icon="star"
+  bind:change="onScoreChange"
+/> 
+<van-button type="danger" size="large" bindtap="submit">提交评论</van-button>

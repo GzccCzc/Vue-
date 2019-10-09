@@ -1,0 +1,106 @@
+/* pages/movieDetail/movieDetail.wxss */
+.main-content{
+  width:100%;
+  height: 380rpx;
+  background-color:darkgrey;
+  
+  
+}
+.title{
+  font-size: 30px;
+  color:white;
+  font-family:"楷体";
+  text-align: center;
+}
+.all{
+
+  position: absolute;
+  right: 0px;
+  /* top: 350rpx; */
+  margin-right: 40rpx;
+  margin-top: -10rpx;
+}
+.comment{
+  background-color: #E3E3E3;
+  margin-bottom: 20rpx;
+  margin-top: 100rpx;
+  padding-top: 20rpx;
+  border-radius: 10rpx;
+  margin-left: 18rpx;
+  margin-right: 18rpx;
+}
+.single{
+  border-bottom:2px solid #ccc;
+  margin-bottom:20rpx; 
+  margin-top: 20rpx;
+}
+/* .forcomment{
+  margin-top: 15rpx;
+  
+} */
+.my-img{
+  width: 8%;
+  height: 8%;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 40rpx;
+  
+}
+.my-name{
+  font-size: 30rpx;
+  color: rgb(17, 16, 16);
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+}
+
+.user{
+  display: flex ;
+}
+.score{
+  
+  /* margin-left: 100rpx; */
+  margin-top: 80rpx;
+  /* margin-right: 200rpx; */
+  position: absolute;
+  left: 100rpx;
+}
+.word{
+  margin-top: 20rpx;
+  vertical-align: middle;
+  height: 29.26rpx;
+}
+.progress{
+  display: flex;
+  margin-left: 100rpx;
+}
+.bar{
+  width:40%;
+ margin-left: 150px;
+ 
+ margin-top: 20rpx;
+  
+}
+.p{
+  margin-bottom:20rpx; 
+  
+}
+.p1{
+/* left:30rpx; */
+left: 5rpx;
+}
+.num{
+  font-size: 80rpx;
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+}
+.top{
+display:flex;
+flex-direction: row;
+
+}
+.scorenum{
+margin-left: -200rpx;
+ position: absolute;
+ margin-top: -24rpx;
+}

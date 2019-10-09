@@ -1,0 +1,33 @@
+<view class="cotainer" >
+<view class="big">
+<image src="{{book.image}}" class="large-image"></image>
+
+<view class="small">
+<text>{{book.title}}</text>
+<text>{{book.subtitle}}</text>
+<text >作者：{{book.author}}</text>
+<text >出版公司：{{book.publisher}}</text>
+<text >出版日期：{{book.pubdate}}</text>
+<text>豆瓣评分：{{book.rating.average}}</text>
+<text>评分人数：{{book.rating.numRaters}}</text>
+</view>
+
+</view>
+<van-divider hairline />
+
+<van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
+  <van-collapse-item title="作者简介" name="1">
+    <text>{{book.author_intro}}</text>
+  </van-collapse-item>
+  <van-collapse-item title="图书简介" name="2">
+    <text>{{book.summary}}</text>
+  </van-collapse-item>
+  <van-collapse-item title="目录" name="3">
+    <text>{{book.catalog}}</text>
+  </van-collapse-item>
+</van-collapse>
+
+</view>
+
+
+

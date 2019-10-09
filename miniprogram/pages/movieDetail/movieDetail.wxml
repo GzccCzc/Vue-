@@ -1,0 +1,81 @@
+
+<view class="main-content">
+  <view class="ccc">
+    <image src="{{detail.images.small}}" mode="aspectFit"></image>
+    <view class="zyx">
+    <text class="title_text">{{detail.title}}</text>
+    <text>上映地点：{{detail.countries}}</text>
+    <text class="pubdate_text">上映时间：{{detail.pubdate}}</text>
+    <text class="durations_text">片长：{{detail.durations}}</text>
+    <view class="zj" wx:for="{{detail.tags}}" wx:for-index="idx" wx:for-item="tag">
+    <view wx:if="{{idx<4}}">
+    <van-tag mark type="success">{{tag}}</van-tag>
+    </view>
+    </view>
+    </view>
+  </view>
+ 
+  <view class="long-dec {{isFold?'hide':'show'}}">
+    <view class="summary">剧情简介：
+      <text>{{detail.summary}}</text>
+    </view>
+    <image class="arrow" src="{{isFold?'../../../../../images/down.png':'../../../../../images/up.png'}}" bindtap="showAll"></image>
+  </view>
+  <text class="detailphoto">详情图片：</text>
+  <!-- <view wx:for="{{detail.photos}}" class='out'> -->
+
+  <scroll-view scroll-x="true" class="image-group">
+    <image src="{{item.image}}" data-list="{{detail.photos}}" data-img="{{item.cover}}" wx:for="{{detail.photos}}" bindtap="openimg" class="czc"></image>
+
+  </scroll-view>
+
+
+<view class="comment">
+  <view class="word">评论
+    <button size="mini" class="all" data-movieid="{{detail.id}}" bindtap="gotoCommentDetail">全部
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;{{total}}></text>
+    </button>
+  </view>
+  <view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+      <text class='select_text'>{{selectData[index]}}</text>
+      <image class='select_img {{show&&"select_img_rotate"}}' src='../../../../../images/down.png'></image>
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+      <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' data-comment1="{{comment}}" catchtap='optionTap'>{{item}}</text>
+    </view>
+  </view>
+
+  <view wx:for="{{comment}}" class="forcomment">
+    <view class="user">
+
+      <open-data type="userAvatarUrl" class="my-img"></open-data>
+      <open-data type="userNickName" class="my-name"></open-data>
+      <text class="day">{{item.formatDate}}</text>
+      <view class="score">
+        <van-rate value="{{ item.dscore }}" size="{{ 8 }}" color="#f44" allow-half count="{{ 10 }}" void-color="#eee" readonly void-icon="star" />
+      </view>
+
+
+
+
+    </view>
+
+
+
+
+    <view class="single" data-score="{{item.dscore}}" bindtap="transcore">{{item.dcomment}}
+
+    </view>
+    <image class="good" src="../../../../../images/good.png" data-movieid="{{item.dmovieid}}" data-commentid="{{item._id}}" catchtap="togood"></image>
+
+    <text class="goodnum" data-goodnum="{{item.goodnum}}" bindtap="tonum">{{item.goodnum}}</text>
+  </view>
+
+
+
+
+
+</view>
+
+</view>

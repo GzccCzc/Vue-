@@ -1,0 +1,68 @@
+/* miniprogram/pages/movie/movie.wxss */
+/* @import "../movie-list-template.wxss";
+@import "../movie-grid-template.wxss"; */
+.movies{
+  height: 300rpx;
+  padding: 10rpx;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+.image{
+  width:200rpx;
+  height: 100%;
+  margin-right: 30rpx;
+}
+.movie-info{
+  flex:1;
+}
+.red{
+  color: #24f6a6;
+  font-size: 40rpx;
+  font-weight: 40rpx
+}
+
+.slide-image{
+  width: 100%;
+}
+.wai{
+  background-color: #f2f2f2;
+  height:100rpx
+}
+.search{
+  border: solid #040404 0px;
+  border-radius: 100rpx;
+  background-color: #FAFAFA;
+  height: 80rpx;
+  width: 90%;
+  margin-left: 36rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx
+}
+
+.search-img{
+  margin: auto 0 auto 20rpx
+}
+.placeholder{
+  font-size: 14px;
+  color: #d1d1d1;
+  margin-left: 20rpx
+}
+.search input{
+  height: 100%;
+  width: 700rpx;
+  margin-left: 20px;
+  font-size: 28rpx;
+}
+.search-pannel{
+  /*浮动在电影之上*/
+  position: absolute;
+  top: 60rpx;
+}
+.btndetail{
+  margin-top: 30rpx;
+}
+.btnscore{
+  margin-top: 30rpx;
+  margin-left: 60rpx;
+}

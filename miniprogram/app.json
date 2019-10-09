@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/my/my",
+    "pages/movieDetail/movieDetail",
+    "pages/comment/comment",
+    "pages/commentDetail/commentDetail",
+  
+    "pages/history/history",
+    "pages/scan/scan",
+    "pages/bookdetail/bookdetail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#008000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "搬豆",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+    
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#008000",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/film.png",
+        "selectedIconPath": "images/filma.png"
+      },
+      {
+        "pagePath": "pages/scan/scan",
+        "text": "图书",
+        "iconPath": "images/book.png",
+        "selectedIconPath": "images/book-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profilea.png"
+      }
+    ]
+  }
+}

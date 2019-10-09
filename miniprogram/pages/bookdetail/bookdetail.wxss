@@ -1,0 +1,22 @@
+.large-image{
+  width:100px;
+  height:150px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.big{
+  display: flex;
+  
+}
+
+.small{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #eee
+}
+.cotainer{
+  background: #A9A9A9;
+}

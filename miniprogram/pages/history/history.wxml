@@ -1,0 +1,23 @@
+<!--miniprogram/pages/history/history.wxml-->
+<view class="movies" wx:for="{{movieList}}">
+   <image  class="image" src="{{item.images.small}}"></image>
+   <view class="movie-info">
+      <view style="height:10rpx"></view>
+      <view>{{item.title}}</view>
+      <view >主演:
+      <text wx:for="{{item.casts}}">{{item.name}}            </text>    
+      </view>
+      <block wx:if="{{item.rating.average==0}}">
+      <view class="red">未上映</view>
+      </block>
+      <block wx:if="{{item.rating.average>0}}">
+      <view class="red">观众评分：{{item.rating.average}}</view>
+      </block>
+      <view>上映年份：{{item.year}}</view>
+      <button size="mini" type="primary" data-movieid="{{item.id}}" bindtap="gotoDetail">电影详情</button>
+      <view style="height:30rpx"></view>
+   </view>
+</view>
+<view class="search-pannel" wx:if="{{searchPanelShow}}" wx:key="">
+<template is="movieGridTemplate" data="{{...searchResult}}"></template>
+</view>

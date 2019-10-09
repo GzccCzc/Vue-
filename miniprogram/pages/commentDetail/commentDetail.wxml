@@ -1,0 +1,68 @@
+<!--pages/movieDetail/movieDetail.wxml-->
+
+<view class="main-content">
+  <!-- /*评分平均数*/ -->
+  <view class="title">{{detail.original_title}} 影评</view>
+  <view class="top">
+
+    <view class="num">{{score}}</view>
+
+    
+    
+    
+    
+    
+    <view class="bar">
+      <view class="p">
+        <van-progress percentage="{{dscore[0]}}" stroke-width="8" show-pivot="false " color="#f2826a" /><view class="scorenum">9-10分</view>
+      </view>
+<view class="p">
+      <van-progress percentage="{{dscore[1]}}" stroke-width="8" show-pivot="false " color="#f2826a" /><view class="scorenum">7-8分</view>
+    </view>
+    <view class="p">
+      <van-progress percentage="{{dscore[2]}}" stroke-width="8" show-pivot="false " color="#f2826a" /><view class="scorenum">5-6分</view>
+    </view>
+    <view class="p">
+      <van-progress percentage="{{dscore[3]}}" stroke-width="8" show-pivot="false " color="#f2826a" /><view class="scorenum">3-4分</view>
+    </view>
+    <view class="p">
+      <van-progress percentage="{{dscore[4]}}" stroke-width="8" show-pivot="false " color="#f2826a" /><view class="scorenum">1-2分</view>
+    </view>
+    </view>
+ 
+</view>
+<view class="p1">
+  <van-rate value="{{ score }}" size="{{ 15 }}" color="#f44" allow-half count="{{ 10 }}" void-color="#eee" void-icon="star" readonly/>
+</view>
+<view class="comment">
+  <view class="word">评论
+    <button size="mini" class="all">全部
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;{{total}}></text>
+    </button>
+  </view>
+  <view wx:for="{{comment}}" class="forcomment">
+    <view class="user">
+
+      <open-data type="userAvatarUrl" class="my-img"></open-data>
+      <open-data type="userNickName" class="my-name"></open-data>
+      <view class="score">
+        <van-rate value="{{ item.dscore }}" size="{{ 8 }}" color="#f44" allow-half count="{{ 10 }}" void-color="#eee" void-icon="star" />
+      </view>
+
+
+
+
+    </view>
+
+
+
+
+    <view class="single" data-score="{{item.dscore}}" bindtap="transcore">{{item.dcomment}}
+    </view>
+  </view>
+
+
+
+</view>
+
+</view>

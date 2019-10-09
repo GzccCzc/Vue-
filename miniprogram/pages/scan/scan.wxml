@@ -1,0 +1,39 @@
+<view class="container">
+<van-search
+  value="{{ value }}"
+  placeholder="请输入书籍ISBN"
+  use-action-slot
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+
+
+  <image src="../../images/saoma.png" class="saoma" bindtap='getScancode'></image>
+</view>
+
+<view wx:for="{{book_list}}">
+<van-card
+  desc="{{item.author}}"
+  title="{{item.title}}"
+  thumb="{{item.images.small}}"
+   >
+  
+<view slot="tags" class="tag">
+  <view wx:for="{{item.tags}}" wx:for-index="idx" wx:for-item="tag">
+  <view wx:if="{{idx<3}}">
+  <van-tag round type="primary">{{tag.name}}</van-tag>
+</view>
+
+
+</view>
+
+</view>
+<view slot="footer">
+<van-button data-id="{{item._id}}"size="small" plain type="primary" bindtap="viewItem">查看详情</van-button>
+<van-button size="small" plain type="danger" bindtap="delete" data-id="{{item._id}}">删除</van-button>
+</view>
+
+</van-card>
+<van-divider dashed />
+</view>

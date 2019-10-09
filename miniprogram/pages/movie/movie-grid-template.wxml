@@ -1,0 +1,6 @@
+<template name="movieGridTemplate">
+<text>朴宝英天下第一</text>
+<view class="grid-container">
+<block wx:for="{{movies}}" wx:key="" wx:for-item="movie"></block>
+</view>
+</template>

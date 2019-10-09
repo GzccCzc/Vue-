@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-field": "vant-weapp/field",
+    "van-rate": "vant-weapp/rate",
+    "van-progress": "vant-weapp/progress"
+  },
+  "navigationBarBackgroundColor": "#008000",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "全部影评"
+}

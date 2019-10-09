@@ -1,0 +1,55 @@
+<view class='my'>
+  <view class="my-img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="my-name"></open-data>
+</view>
+<!-- <view class="my-text"><text>下面的是通过点击事件去获取用户的信息</text></view>
+<button  open-type="getUserInfo"   bindgetuserinfo="onGotUserInfo" type="primary">获取用户信息</button> -->
+
+
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">收藏的电影</button>
+    </view>
+  </view>
+
+
+  <!-- 上传图片 -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="gotoHistory">
+      <text>我的浏览记录</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="gotoHistory"></image>
+    </view>
+  </view>
+
+
+  <!-- 操作数据库 -->
+  <view class="uploader">
+    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+      <text>个人信息设置</text>
+    </navigator>
+  </view>
+
+  <!-- 即时通信 -->
+  <view class="uploader">
+    <navigator url="../im/im" open-type="navigate" class="uploader-text">
+      <text>最近收看的视频</text>
+    </navigator>
+  </view>
+
+  <!-- 云调用 -->
+  <view class="uploader">
+    <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
+      <text>最近浏览的图书</text>
+    </navigator>
+  </view>
+
+
+</view>
+
